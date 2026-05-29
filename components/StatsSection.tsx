@@ -27,7 +27,7 @@ const fade = (delay: number) => ({
   initial: { opacity: 0, y: 18 },
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true, margin: "-80px" },
-  transition: { duration: 0.65, ease: "easeOut", delay },
+  transition: { duration: 0.65, ease: "easeOut" as const, delay },
 });
 
 const CONTAINER_W = 280;
