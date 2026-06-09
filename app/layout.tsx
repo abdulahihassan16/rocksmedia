@@ -15,6 +15,14 @@ export const metadata: Metadata = {
   title: "Rocks Media: Custom Websites for Your Business",
   description:
     "Rocks Media builds custom, handcrafted websites for businesses. No templates, no shortcuts. Just a real website built personally for you.",
+  icons: {
+    icon: [
+      { url: "/images/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/images/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/images/favicon.ico", sizes: "any" },
+    ],
+    apple: { url: "/images/apple-touch-icon.png" },
+  },
 };
 
 export default function RootLayout({
