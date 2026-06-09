@@ -167,8 +167,8 @@ export function HeroSection({ scrollToPricing, scrollToContact }: HeroSectionPro
           className="hero-headline font-black tracking-tighter text-white leading-none mb-6 md:mb-10 text-center"
         >
           <span className="block">Your Business Deserves</span>
-          <span className="block">a Website That</span>
-          <span className="block">
+          <span className="block md:inline">a Website That </span>
+          <span className="block md:inline">
             <span ref={cyclingWordRef} style={{ color: "#4f8ef7" }}>Rocks</span><span
               className="typewriter-cursor"
               style={{ color: "#4f8ef7", marginLeft: "1px" }}
