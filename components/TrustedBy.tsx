@@ -91,12 +91,12 @@ export function TrustedBy() {
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </Link>
-              <button
-                onClick={() => document.getElementById("work")?.scrollIntoView({ behavior: "smooth" })}
+              <Link
+                href="/work"
                 className="inline-flex items-center gap-3 px-10 py-5 rounded-2xl border border-white/15 text-white font-bold text-lg hover:bg-white/[0.05] active:scale-[0.98] transition-all duration-150 cursor-pointer"
               >
                 See Our Work
-              </button>
+              </Link>
             </div>
           </div>
 
