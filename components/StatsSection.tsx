@@ -298,7 +298,7 @@ export function StatsSection() {
         style={{
           position: "absolute",
           top: 0,
-          left: "calc(50% + 15px)",
+          left: "calc(50% + 5px)",
           transform: "translateX(-50%)",
           width: `${CONTAINER_W}px`,
           height: `${LENS_Y + 10 + BEAM_H}px`,
