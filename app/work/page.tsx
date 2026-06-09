@@ -91,7 +91,28 @@ function SiteIcon() {
 
 // ─── Live iframe preview ───────────────────────────────────────────────────────
 
-function LivePreviewCard({ link, label }: { link: string; label: string }) {
+function LivePreviewCard({ link, label, isMobile }: { link: string; label: string; isMobile: boolean }) {
+  if (isMobile) {
+    return (
+      <div
+        className="relative w-full h-full flex flex-col items-center justify-center gap-4 px-8"
+        style={{ background: NAVY }}
+      >
+        <span className="text-white text-xl font-black tracking-tight text-center leading-snug">
+          {label}
+        </span>
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold text-white border border-white/20 hover:bg-white/10 transition-colors"
+        >
+          View Live Site →
+        </a>
+      </div>
+    );
+  }
+
   return (
     <div className="relative w-full h-full overflow-hidden">
       <iframe
@@ -109,7 +130,6 @@ function LivePreviewCard({ link, label }: { link: string; label: string }) {
         loading="lazy"
         sandbox="allow-scripts allow-same-origin"
       />
-      {/* 10% dark overlay to blend into card styling */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{ background: "rgba(0,0,0,0.10)" }}
@@ -144,6 +164,14 @@ function PlaceholderCard({ label }: { label: string }) {
 export default function WorkPage() {
   const [step, setStep] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
 
   const currentIndex = ((step % CLIENTS.length) + CLIENTS.length) % CLIENTS.length;
 
@@ -322,7 +350,7 @@ export default function WorkPage() {
                     >
                       {/* Live iframe or placeholder */}
                       {client.link ? (
-                        <LivePreviewCard link={client.link} label={client.label} />
+                        <LivePreviewCard link={client.link} label={client.label} isMobile={isMobile} />
                       ) : (
                         <PlaceholderCard label={client.label} />
                       )}
