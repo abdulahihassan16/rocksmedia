@@ -95,7 +95,7 @@ export function Navbar() {
       </div>
 
       {/* Thin separator line */}
-      <div className="mx-6 border-b border-white/15" />
+      <div className="mx-6 border-b border-white/15 -mt-4 md:mt-0" />
 
       {/* Mobile full-screen overlay */}
       <AnimatePresence>
