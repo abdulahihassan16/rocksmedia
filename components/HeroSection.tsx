@@ -305,7 +305,7 @@ export function HeroSection({ scrollToPricing, scrollToContact }: HeroSectionPro
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 4.0, duration: 0.8 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-3"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 hidden md:flex flex-col items-center gap-3"
       >
         <span className="text-white text-[9px] uppercase tracking-[0.3em] font-mono">Scroll</span>
         <div className="relative w-px h-10 bg-white/10 overflow-hidden">
