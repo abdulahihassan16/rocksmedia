@@ -89,9 +89,14 @@ export function Footer() {
           <p className="text-xs text-white">
             &copy; {new Date().getFullYear()} Rocks Media. All rights reserved.
           </p>
-          <p className="text-xs text-white">
-            Custom websites built with care, one at a time.
-          </p>
+          <div className="flex items-center gap-5">
+            <Link href="/privacy" className="text-xs text-white/50 hover:text-white transition-colors">
+              Privacy Policy
+            </Link>
+            <Link href="/terms" className="text-xs text-white/50 hover:text-white transition-colors">
+              Terms of Service
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
