@@ -2,12 +2,22 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+
+const footerLinks = [
+  { label: "Services", href: "/#services" },
+  { label: "About Us", href: "/about" },
+  { label: "Recent Work", href: "/work" },
+  { label: "How it Works", href: "/#how-it-works" },
+  { label: "Pricing", href: "/#pricing" },
+  { label: "Contact", href: "/#contact" },
+];
 
 export function Footer() {
   const [logoError, setLogoError] = useState(false);
 
   return (
-    <footer id="contact" className="border-t border-white/10 py-16 px-5 md:px-4">
+    <footer className="border-t border-white/10 py-16 px-5 md:px-4">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div className="flex flex-col gap-4">
@@ -29,8 +39,8 @@ export function Footer() {
               )}
             </a>
             <p className="text-sm text-white max-w-xs">
-              Custom websites built personally for your business. No templates.
-              No AI shortcuts. Just real, handcrafted work.
+              Custom websites built personally for your business. No templates,
+              no shortcuts. Just real, handcrafted work.
             </p>
           </div>
 
@@ -39,14 +49,14 @@ export function Footer() {
               Navigation
             </h4>
             <ul className="flex flex-col gap-2">
-              {["Services", "Work", "Pricing", "Contact"].map((item) => (
-                <li key={item}>
-                  <a
-                    href={`#${item.toLowerCase()}`}
+              {footerLinks.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    href={link.href}
                     className="text-sm text-white hover:text-white transition-colors"
                   >
-                    {item}
-                  </a>
+                    {link.label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -61,16 +71,16 @@ export function Footer() {
               your project going.
             </p>
             <a
-              href="tel:+1234567890"
+              href="tel:+16475135490"
               className="text-sm text-blue-400 hover:text-blue-300 transition-colors font-medium"
             >
-              (123) 456-7890
+              647-513-5490
             </a>
             <a
-              href="mailto:hello@rocksmedia.com"
+              href="mailto:abdulahihassan16@gmail.com"
               className="text-sm text-blue-400 hover:text-blue-300 transition-colors font-medium"
             >
-              hello@rocksmedia.com
+              abdulahihassan16@gmail.com
             </a>
           </div>
         </div>
@@ -80,7 +90,7 @@ export function Footer() {
             &copy; {new Date().getFullYear()} Rocks Media. All rights reserved.
           </p>
           <p className="text-xs text-white">
-            Custom websites built with care — one at a time.
+            Custom websites built with care, one at a time.
           </p>
         </div>
       </div>

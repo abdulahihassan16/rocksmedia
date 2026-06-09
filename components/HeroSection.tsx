@@ -117,7 +117,7 @@ export function HeroSection({ scrollToPricing, scrollToContact }: HeroSectionPro
   }, []);
 
   return (
-    <section className="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden">
+    <section className="relative w-full h-screen flex flex-col items-center justify-start pt-28 pb-20 md:justify-center md:pt-0 md:pb-0 overflow-hidden">
       <style>{`
         @keyframes typewriter-cursor-blink {
           0%, 100% { opacity: 1; }
@@ -125,6 +125,10 @@ export function HeroSection({ scrollToPricing, scrollToContact }: HeroSectionPro
         }
         .typewriter-cursor {
           animation: typewriter-cursor-blink 0.7s step-end infinite;
+        }
+        .hero-headline { font-size: clamp(2.8rem, 10vw, 4rem); }
+        @media (min-width: 769px) {
+          .hero-headline { font-size: clamp(2rem, 5.8vw, 6rem); }
         }
       `}</style>
 
@@ -150,22 +154,21 @@ export function HeroSection({ scrollToPricing, scrollToContact }: HeroSectionPro
           transition={{ duration: 0.6, delay: 2.4 }}
           className="flex items-center gap-3 mb-8"
         >
-          <span className="h-px w-10 bg-white/30 shrink-0 hidden sm:block" />
-          <span className="text-white/85 text-[10px] sm:text-xs uppercase tracking-[0.15em] sm:tracking-[0.25em] font-medium text-center leading-relaxed">
+          <span className="h-px w-10 bg-white/30 shrink-0" />
+          <span className="text-white/85 text-[11px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] font-medium text-center leading-relaxed">
             100% Custom · 100% Personal · 0% Templates
           </span>
-          <span className="h-px w-10 bg-white/30 shrink-0 hidden sm:block" />
+          <span className="h-px w-10 bg-white/30 shrink-0" />
         </motion.div>
 
         {/* Headline — full width, two lines, split by GSAP */}
         <h1
           ref={headlineRef}
-          className="font-black tracking-tighter text-white leading-none mb-10 text-center"
-          style={{ fontSize: "clamp(1.1rem, 5.8vw, 6rem)" }}
+          className="hero-headline font-black tracking-tighter text-white leading-none mb-6 md:mb-10 text-center"
         >
           <span className="block">Your Business Deserves</span>
-          <span className="block whitespace-nowrap">
-            a Website That{" "}
+          <span className="block">a Website That</span>
+          <span className="block">
             <span ref={cyclingWordRef} style={{ color: "#4f8ef7" }}>Rocks</span><span
               className="typewriter-cursor"
               style={{ color: "#4f8ef7", marginLeft: "1px" }}
@@ -179,11 +182,11 @@ export function HeroSection({ scrollToPricing, scrollToContact }: HeroSectionPro
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 3.2 }}
-          className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 items-center"
+          className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 items-center mt-6 md:mt-0"
         >
           {/* LEFT — subtext + CTA button + stats */}
           <div className="flex flex-col items-center md:items-start gap-6">
-            <p className="text-[13.5px] text-white leading-relaxed max-w-xs text-center md:text-left">
+            <p className="text-base md:text-[13.5px] text-white leading-relaxed max-w-xs text-center md:text-left">
               Handcrafted personally for you, by someone who actually cares about what happens to your business.
             </p>
 
@@ -225,7 +228,7 @@ export function HeroSection({ scrollToPricing, scrollToContact }: HeroSectionPro
                 </svg>
               </motion.div>
               <button
-                onClick={scrollToPricing}
+                onClick={scrollToContact}
                 className="h-12 w-full md:h-9 md:w-56 rounded-xl flex items-center justify-center cursor-pointer bg-blue-300 hover:bg-blue-200 transition-colors duration-200"
               >
                 <span className="text-blue-900 text-xs font-medium tracking-wide whitespace-nowrap">

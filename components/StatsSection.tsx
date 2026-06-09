@@ -284,6 +284,11 @@ export function StatsSection() {
 
   return (
     <section className="relative w-full py-48 px-5 md:px-16">
+      <style>{`
+        @media (min-width: 769px) {
+          .ufo-outer { left: calc(50% + 160px) !important; }
+        }
+      `}</style>
 
       {/* UFO + beam ── outer div is the IntersectionObserver target */}
       <div
@@ -293,8 +298,8 @@ export function StatsSection() {
         style={{
           position: "absolute",
           top: 0,
-          left: "50%",
-          transform: "translateX(calc(-50% + 150px))",
+          left: "calc(50% + 13px)",
+          transform: "translateX(-50%)",
           width: `${CONTAINER_W}px`,
           height: `${LENS_Y + 10 + BEAM_H}px`,
           pointerEvents: "none",
@@ -338,30 +343,64 @@ export function StatsSection() {
               }}
             >
               Exist
-              {/* Halo — the lit pool where the beam lands */}
+              {/* Halo mobile — small, stays as-is */}
               <motion.span
                 aria-hidden="true"
+                className="md:hidden"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: existInView ? 1 : 0 }}
-                transition={{ duration: 0.5, ease: "easeIn", delay: 0.15 }}
+                transition={{ duration: 0.5, ease: "easeIn", delay: 0.75 }}
+                style={{
+                  position: "absolute",
+                  left: "50%",
+                  top: "50%",
+                  transform: "translate(-50%, -58%)",
+                  width: "280px",
+                  height: "160px",
+                  background: `
+                    radial-gradient(ellipse 130px 60px at 50% 58%,
+                      rgba(255, 252, 228, 0.07) 0%,
+                      rgba(255, 252, 228, 0.04) 42%,
+                      rgba(255, 252, 228, 0.00) 65%
+                    ),
+                    radial-gradient(ellipse 90px 40px at 50% 58%,
+                      rgba(255, 252, 235, 0.00) 0%,
+                      rgba(255, 252, 235, 0.00) 40%,
+                      rgba(255, 252, 228, 0.48) 53%,
+                      rgba(255, 250, 222, 0.22) 65%,
+                      rgba(255, 248, 218, 0.08) 78%,
+                      rgba(255, 248, 218, 0.00) 90%
+                    )
+                  `,
+                  pointerEvents: "none",
+                  mixBlendMode: "screen",
+                }}
+              />
+              {/* Halo desktop — larger, focused around "Exist" */}
+              <motion.span
+                aria-hidden="true"
+                className="hidden md:block"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: existInView ? 1 : 0 }}
+                transition={{ duration: 0.5, ease: "easeIn", delay: 0.75 }}
                 style={{
                   position: "absolute",
                   left: "50%",
                   top: "50%",
                   transform: "translate(-50%, -58%)",
                   width: "640px",
-                  height: "380px",
+                  height: "320px",
                   background: `
                     radial-gradient(ellipse 300px 140px at 50% 58%,
-                      rgba(255, 252, 228, 0.07) 0%,
-                      rgba(255, 252, 228, 0.04) 42%,
+                      rgba(255, 252, 228, 0.10) 0%,
+                      rgba(255, 252, 228, 0.06) 42%,
                       rgba(255, 252, 228, 0.00) 65%
                     ),
-                    radial-gradient(ellipse 210px 92px at 50% 58%,
+                    radial-gradient(ellipse 200px 90px at 50% 58%,
                       rgba(255, 252, 235, 0.00) 0%,
                       rgba(255, 252, 235, 0.00) 40%,
-                      rgba(255, 252, 228, 0.48) 53%,
-                      rgba(255, 250, 222, 0.22) 65%,
+                      rgba(255, 252, 228, 0.55) 53%,
+                      rgba(255, 250, 222, 0.26) 65%,
                       rgba(255, 248, 218, 0.08) 78%,
                       rgba(255, 248, 218, 0.00) 90%
                     )

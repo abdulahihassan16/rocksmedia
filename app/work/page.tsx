@@ -21,6 +21,12 @@ const CLIENTS = [
     link: "https://cnwindowcleaning.ca/",
   },
   {
+    id: "victory-ai",
+    label: "Victory AI",
+    description: "Custom website built for Victory AI.",
+    link: "https://thevictory.ai/",
+  },
+  {
     id: "somali-handyman",
     label: "Somali Handyman GTA",
     description: "Local handyman service built to convert visitors into calls.",
@@ -48,7 +54,7 @@ const CLIENTS = [
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 
-const AUTO_PLAY_INTERVAL = 3000;
+const AUTO_PLAY_INTERVAL = 4000;
 const ITEM_HEIGHT = 65;
 const NAVY = "#0b1026";
 

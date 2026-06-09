@@ -27,7 +27,7 @@ export default function AboutPage() {
               We build websites<br />for real businesses.
             </h1>
             <p className="text-black/60 text-xl leading-relaxed max-w-2xl">
-              Rocks Media is a Canadian web studio that builds custom websites entirely by hand — no templates, no AI shortcuts, no page builders. Just real work, built personally for you.
+              Rocks Media is a Canadian web studio that builds custom websites entirely by hand, with no templates and no page builders. Just real work, built personally for you.
             </p>
           </motion.div>
         </div>
@@ -100,10 +100,10 @@ export default function AboutPage() {
           <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
             <h2 className="text-4xl font-black tracking-tighter text-black mb-6">Founded in 2025.</h2>
             <p className="text-black/60 leading-relaxed mb-4">
-              We started Rocks Media because we kept seeing the same thing — great local businesses losing customers online to competitors with prettier websites. That felt wrong.
+              We started Rocks Media because we kept seeing the same thing: great local businesses losing customers online to competitors with prettier websites. That felt wrong.
             </p>
             <p className="text-black/60 leading-relaxed">
-              So we built a studio focused entirely on local businesses. Not enterprise clients, not startups with VC money — just real business owners who deserve a website that works as hard as they do.
+              So we built a studio focused entirely on local businesses. Not enterprise clients, not startups with VC money. Just real business owners who deserve a website that works as hard as they do.
             </p>
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, delay: 0.1 }}>
@@ -113,7 +113,7 @@ export default function AboutPage() {
                 "A website should convert visitors into customers, not just look good.",
                 "Every business deserves something built specifically for them.",
                 "Speed matters. Most sites should be live in under two weeks.",
-                "You should own everything — no platform lock-in, ever.",
+                "You should own everything, with no platform lock-in, ever.",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3 text-black/60">
                   <span className="text-blue-600 font-bold mt-0.5 shrink-0">—</span>

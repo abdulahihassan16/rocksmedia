@@ -5,12 +5,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Plus } from "lucide-react";
 
 const FAQS = [
-  { q: "How long does it take to build my website?", a: "Most sites are delivered within 5–10 business days from our discovery call. We move fast because we work on one project at a time — your site gets our full attention." },
+  { q: "How long does it take to build my website?", a: "Most sites are delivered within 5–10 business days from our discovery call. We move fast because we work on one project at a time, so your site gets our full attention." },
   { q: "Do I own my website?", a: "100%. Once your site is live and payment is complete, you own every file, every line of code, and the domain. Nothing is locked behind our platform." },
-  { q: "What if I don't like the design?", a: "We share the design before anything goes live and revisions are included. We don't launch until you're genuinely happy — that's not a policy, it's just how we work." },
-  { q: "Do you use templates or AI to build sites?", a: "Never. Every site is built by hand from scratch, personally. No page builders, no AI-generated layouts, no templates. That's what makes the quality different." },
-  { q: "What's included in the monthly care plan?", a: "Hosting, updates, security monitoring, and direct access to us for any changes. Think of it as having a web team on call — without hiring one full-time." },
-  { q: "What if I want changes after the site launches?", a: "Small tweaks are covered under the care plan. For larger additions — a new page, a booking system, a product catalogue — we scope it out and give you a flat price upfront." },
+  { q: "What if I don't like the design?", a: "We share the design before anything goes live and revisions are included. We don't launch until you're genuinely happy. That's not a policy, it's just how we work." },
+  { q: "Do you use templates to build sites?", a: "Never. Every site is built from scratch, personally. No page builders, no pre-made layouts, no templates. That's what makes the quality different." },
+  { q: "What's included in the monthly care plan?", a: "Hosting, updates, security monitoring, and direct access to us for any changes. Think of it as having a web team on call, without hiring one full-time." },
+  { q: "What if I want changes after the site launches?", a: "Small tweaks are covered under the care plan. For larger additions like a new page, a booking system, or a product catalogue, we scope it out and give you a flat price upfront." },
 ];
 
 export function FAQSection() {

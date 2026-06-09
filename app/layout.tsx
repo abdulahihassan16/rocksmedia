@@ -12,9 +12,9 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: "Rocks Media — Custom Websites for Your Business",
+  title: "Rocks Media: Custom Websites for Your Business",
   description:
-    "Rocks Media builds custom, handcrafted websites for businesses. No templates, no AI shortcuts — just a real website built personally for you.",
+    "Rocks Media builds custom, handcrafted websites for businesses. No templates, no shortcuts. Just a real website built personally for you.",
 };
 
 export default function RootLayout({

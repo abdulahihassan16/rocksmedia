@@ -66,7 +66,7 @@ export function TrustedBy() {
 
             <p className="text-white text-lg sm:text-xl leading-relaxed max-w-xl mb-12">
               Founded in 2025, Rocks Media is a Canadian web studio built entirely around local
-              businesses. In a short time we&apos;ve already made an impact on hundreds of people —
+              businesses. In a short time we&apos;ve already made an impact on hundreds of people,
               helping owners across Canada finally have a website that works as hard as they do.
             </p>
 

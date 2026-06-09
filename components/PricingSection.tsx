@@ -11,19 +11,19 @@ import { cn } from "@/lib/utils";
 
 const plans = [
   {
-    id: "essentials",
-    name: "Essentials",
+    id: "essential",
+    name: "Essential",
     description: "Get online fast with a clean, professional website built personally for your business.",
-    oneTimePrice: 499,
+    oneTimePrice: 399,
     monthlyPrice: 49,
     buttonText: "Get Started",
     popular: false,
     features: [
-      { name: "Up to 5 custom pages", included: true },
+      { name: "Up to 3 custom pages", included: true },
       { name: "Mobile-responsive design", included: true },
       { name: "Contact form", included: true },
       { name: "Google Maps integration", included: true },
-      { name: "Basic SEO setup", included: true },
+      { name: "Essential SEO setup", included: true },
       { name: "Social media links", included: true },
       { name: "1 round of revisions", included: true },
       { name: "Booking / scheduling form", included: false },
@@ -35,7 +35,7 @@ const plans = [
     id: "premium",
     name: "Premium",
     description: "For businesses ready to grow — more pages, more features, and a standout design.",
-    oneTimePrice: 999,
+    oneTimePrice: 699,
     monthlyPrice: 99,
     buttonText: "Get Started",
     popular: true,
@@ -56,8 +56,9 @@ const plans = [
     id: "professional",
     name: "Professional",
     description: "The full package — a fully custom website built to dominate your market.",
-    oneTimePrice: 1999,
+    oneTimePrice: 1599,
     monthlyPrice: 199,
+    oneTimeSuffix: "+",
     buttonText: "Get Started",
     popular: false,
     features: [
@@ -134,7 +135,7 @@ export function PricingSection() {
   return (
     <section
       id="pricing"
-      className="relative overflow-x-hidden py-32 px-5 md:px-4"
+      className="relative overflow-x-hidden py-32 px-8 md:px-4"
     >
       {/* Grid lines */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:70px_80px] pointer-events-none" />
@@ -182,7 +183,7 @@ export function PricingSection() {
             animate={{ opacity: 1 }}
             className="text-sm text-white"
           >
-            Includes hosting, updates &amp; ongoing support — cancel anytime.
+            Includes hosting, updates &amp; ongoing support. Cancel anytime.
           </motion.p>
         )}
       </div>
@@ -221,6 +222,7 @@ export function PricingSection() {
                       value={isMonthly ? plan.monthlyPrice : plan.oneTimePrice}
                       className="text-4xl font-semibold"
                     />
+                    {!isMonthly && (plan as { oneTimeSuffix?: string }).oneTimeSuffix}
                   </span>
                   <span className="text-white ml-2 text-sm">
                     {isMonthly ? "/month" : " one-time"}
@@ -282,7 +284,7 @@ export function PricingSection() {
         <a href="#contact" className="text-blue-400 hover:underline font-medium">
           Call or message us
         </a>{" "}
-        — we&apos;ll figure it out together.
+        and we&apos;ll figure it out together.
       </motion.p>
     </section>
   );

@@ -78,7 +78,7 @@ export function ScrollZoomSection() {
 
           <p className="text-white/85 text-base md:text-lg max-w-sm leading-relaxed">
             Every site we create is solid, intentional, and built
-            by hand — no shortcuts.
+            by hand, no shortcuts.
           </p>
         </motion.div>
 

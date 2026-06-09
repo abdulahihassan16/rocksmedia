@@ -17,21 +17,21 @@ const PROCESS_STEPS = [
     label: "Step 1",
     title: "We start with a conversation",
     description:
-      "We learn your business, your goals, and what makes you stand out. One call is all it takes — no forms, no questionnaires, just a real conversation.",
+      "We learn your business, your goals, and what makes you stand out. One call is all it takes. No forms, no questionnaires, just a real conversation.",
   },
   {
     name: "Design",
     label: "Step 2",
     title: "Your site is built by hand",
     description:
-      "No templates, no AI shortcuts. Every pixel is crafted specifically around your brand, delivered in days, not weeks.",
+      "No templates, no shortcuts. Every pixel is crafted specifically around your brand, delivered in days, not weeks.",
   },
   {
     name: "Review",
     label: "Step 3",
     title: "You have full control",
     description:
-      "We share the design with you before anything goes live. Your feedback shapes the final result — we don't launch until you're happy.",
+      "We share the design with you before anything goes live. Your feedback shapes the final result, and we don't launch until you're happy.",
   },
   {
     name: "Launch",
@@ -480,7 +480,7 @@ function HeroWithImages({ title = "How We Build Your Site" }: HeroWithImagesProp
 
   return (
     <div className="w-full py-24 lg:py-40 relative overflow-hidden">
-      <div className="container mx-auto px-5 md:px-4">
+      <div className="container mx-auto px-8 md:px-4">
 
         {/* ── Centered one-line title ── */}
         <h2
