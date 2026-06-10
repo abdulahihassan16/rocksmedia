@@ -90,7 +90,7 @@ const jsonLd = {
     "Custom website design and development for small businesses across Canada and the US.",
   url: BASE_URL,
   telephone: "+16475135490",
-  email: "abdulahihassan16@gmail.com",
+  email: "contact.rocksmedia@gmail.com",
   address: {
     "@type": "PostalAddress",
     addressRegion: "ON",

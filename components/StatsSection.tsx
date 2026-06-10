@@ -424,7 +424,7 @@ export function StatsSection() {
                 <span className="text-4xl sm:text-6xl md:text-7xl font-black text-white leading-none mb-3 tabular-nums">
                   {stat.value}
                 </span>
-                <span className="text-[11px] sm:text-xs md:text-sm text-white leading-snug max-w-[140px]">
+                <span className="text-sm sm:text-sm md:text-base font-bold text-white leading-snug max-w-[140px]">
                   {stat.label}
                 </span>
               </motion.div>

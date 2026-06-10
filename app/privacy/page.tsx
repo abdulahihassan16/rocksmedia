@@ -6,7 +6,7 @@ import { Footer } from "@/components/Footer";
 
 const LAST_UPDATED = "June 9, 2025";
 const COMPANY = "Rocks Media";
-const EMAIL = "abdulahihassan16@gmail.com";
+const EMAIL = "contact.rocksmedia@gmail.com";
 const PHONE = "647-513-5490";
 const LOCATION = "Ontario, Canada";
 

@@ -128,7 +128,7 @@ export function HeroSection({ scrollToPricing, scrollToContact }: HeroSectionPro
         }
         .hero-headline { font-size: clamp(2.8rem, 10vw, 4rem); }
         @media (min-width: 769px) {
-          .hero-headline { font-size: clamp(2rem, 5.8vw, 6rem); }
+          .hero-headline { font-size: clamp(2rem, 5.8vw, 5.4rem); }
         }
       `}</style>
 
@@ -164,7 +164,7 @@ export function HeroSection({ scrollToPricing, scrollToContact }: HeroSectionPro
         {/* Headline — full width, two lines, split by GSAP */}
         <h1
           ref={headlineRef}
-          className="hero-headline font-black tracking-tighter text-white leading-none mb-6 md:mb-10 text-center"
+          className="hero-headline w-full font-black tracking-tighter text-white leading-none mb-6 md:mb-10 text-center"
         >
           <span className="block">Your Business Deserves</span>
           <span className="block md:inline">a Website That </span>
